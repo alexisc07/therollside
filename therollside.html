@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Roll Side | Cinnamon Rolls</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --wine-red: #722F37;
+            --pure-white: #FFFFFF;
+            --pastel-pink: #FFB6C1;
+            --gold: #FFD700;
+            --soft-peach: #FFE5B4;
+            --dark-brown: #654321;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: var(--pure-white);
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: var(--wine-red);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Pacifico', cursive;
+            color: var(--pure-white);
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .nav-link {
+            color: var(--pure-white);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, var(--pastel-pink), var(--soft-peach));
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-family: 'Pacifico', cursive;
+            color: var(--wine-red);
+            font-size: 2.5rem;
+        }
+
+        .hero-subtitle {
+            color: var(--dark-brown);
+            font-size: 1.2rem;
+        }
+
+        .cta-button {
+            background-color: var(--pastel-pink);
+            color: var(--pure-white);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--gold);
+        }
+
+        /* Featured Section */
+        .featured {
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--pure-white);
+            border: 2px solid var(--wine-red);
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .card-title {
+            color: var(--wine-red);
+            font-size: 1.5rem;
+        }
+
+        .card-price {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: var(--wine-red);
+            color: var(--pure-white);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .social-link {
+            color: var(--gold);
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav {
+                margin-top: 1rem;
+            }
+
+            .nav-link {
+                margin: 0 1rem;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1 class="logo">The Roll Side</h1>
+        <nav class="nav">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#menu" class="nav-link">Menu</a>
+            <a href="#about" class="nav-link">About Us</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2 class="hero-title">Delicious Cinnamon Rolls, Made with Love!</h2>
+            <p class="hero-subtitle">Order now and satisfy your sweet cravings!</p>
+            <button class="cta-button">Order Now</button>
+        </div>
+    </section>
+
+    <!-- Featured Section (Menu) -->
+    <section class="featured" id="menu">
+        <div class="card">
+            <img src="C:\Users\LENOVO\OneDrive\Escritorio\therollside\rollosdcanela.jpg" alt="Classic Cinnamon Roll" class="card-image">
+            <h3 class="card-title">Classic Cinnamon Roll</h3>
+            <p class="card-description">Freshly baked with a hint of vanilla.</p>
+            <p class="card-price">$3.99</p>
+        </div>
+        <!-- Add more cards here -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="social-icons">
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">Facebook</a>
+        </div>
+        <p class="footer-text">Contact: hello@therollside.com</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const sectionId = link.getAttribute('href');
+                document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // CTA button hover effect
+        const ctaButton = document.querySelector('.cta-button');
+        ctaButton.addEventListener('mouseover', () => {
+            ctaButton.style.transform = 'scale(1.05)';
+        });
+        ctaButton.addEventListener('mouseout', () => {
+            ctaButton.style.transform = 'scale(1)';
+        });
+    </script>
+</body>
+</html>
