@@ -138,25 +138,24 @@ body {
     .hero-title {
         font-size: 2rem;
     }
-
+}
     /* About Us Section */
-.about-section {
+.aboutus-section {
     padding: 4rem 2rem;
     max-width: 800px;
     margin: 0 auto;
     color: var(--dark-brown);
 }
 
-.about-section h2 {
+.aboutus-section h2 {
     font-family: 'Pacifico', cursive;
     color: var(--wine-red);
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
-.about-section p {
+.aboutus-section p {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 2rem;
-}
 }

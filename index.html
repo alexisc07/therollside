@@ -12,10 +12,10 @@
     <header class="header">
         <h1 class="logo">The Roll Side</h1>
         <nav class="nav">
-            <a href="#home" class="nav-link">Home</a>
+            <a href="#home" class="nav-link">Inicio</a>
             <a href="#menu" class="nav-link">Menu</a>
-            <a href="aboutus.html" class="nav-link">About Us</a>
-            <a href="#contact" class="nav-link">Contact</a>
+            <a href="aboutus.html" class="nav-link">Sobre Nosotros</a>
+            <a href="#contact" class="nav-link">Contactanos</a>
         </nav>
     </header>
 
@@ -43,31 +43,30 @@
     <footer class="footer" id="contact">
         <div class="social-icons">
             <a href="#" class="social-link">Instagram</a>
-            <a href="#" class="social-link">Facebook</a>
         </div>
-        <p class="footer-text">Contact: hello@therollside.com</p>
+        <p class="footer-text">alexisc@institutobaldor.edu.mx</p>
     </footer>
 
     <section class="featured" id="menu">  <!-- Added id="menu" -->
 
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const sectionId = link.getAttribute('href');
-                document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        // CTA button hover effect
-        const ctaButton = document.querySelector('.cta-button');
-        ctaButton.addEventListener('mouseover', () => {
-            ctaButton.style.transform = 'scale(1.05)';
-        });
-        ctaButton.addEventListener('mouseout', () => {
-            ctaButton.style.transform = 'scale(1)';
-        });
+      document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', (e) => {
+    const href = link.getAttribute('href');
+    
+    // Only handle anchor links (e.g., #menu, #home)
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const sectionId = href;
+      const section = document.querySelector(sectionId);
+      
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    // Let the browser handle external links (e.g., about.html)
+  });
+});
     </script>
 </body>
 </html>
