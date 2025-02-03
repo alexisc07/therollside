@@ -5,149 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Roll Side | Cinnamon Rolls</title>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --wine-red: #722F37;
-            --pure-white: #FFFFFF;
-            --pastel-pink: #FFB6C1;
-            --gold: #FFD700;
-            --soft-peach: #FFE5B4;
-            --dark-brown: #654321;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            background-color: var(--pure-white);
-        }
-
-        /* Header Styles */
-        .header {
-            background-color: var(--wine-red);
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: 'Pacifico', cursive;
-            color: var(--pure-white);
-            font-size: 2rem;
-            margin: 0;
-        }
-
-        .nav-link {
-            color: var(--pure-white);
-            text-decoration: none;
-            margin-left: 2rem;
-            transition: color 0.3s;
-        }
-
-        .nav-link:hover {
-            color: var(--gold);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(to right, var(--pastel-pink), var(--soft-peach));
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-
-        .hero-title {
-            font-family: 'Pacifico', cursive;
-            color: var(--wine-red);
-            font-size: 2.5rem;
-        }
-
-        .hero-subtitle {
-            color: var(--dark-brown);
-            font-size: 1.2rem;
-        }
-
-        .cta-button {
-            background-color: var(--pastel-pink);
-            color: var(--pure-white);
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 25px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .cta-button:hover {
-            background-color: var(--gold);
-        }
-
-        /* Featured Section */
-        .featured {
-            padding: 3rem 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background-color: var(--pure-white);
-            border: 2px solid var(--wine-red);
-            border-radius: 10px;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        .card-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-
-        .card-title {
-            color: var(--wine-red);
-            font-size: 1.5rem;
-        }
-
-        .card-price {
-            color: var(--gold);
-            font-size: 1.2rem;
-        }
-
-        /* Footer Styles */
-        .footer {
-            background-color: var(--wine-red);
-            color: var(--pure-white);
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .social-link {
-            color: var(--gold);
-            text-decoration: none;
-            margin: 0 1rem;
-        }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .nav {
-                margin-top: 1rem;
-            }
-
-            .nav-link {
-                margin: 0 1rem;
-            }
-
-            .hero-title {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
@@ -156,7 +14,7 @@
         <nav class="nav">
             <a href="#home" class="nav-link">Home</a>
             <a href="#menu" class="nav-link">Menu</a>
-            <a href="#about" class="nav-link">About Us</a>
+            <a href="about.html" class="nav-link">About Us</a>
             <a href="#contact" class="nav-link">Contact</a>
         </nav>
     </header>
